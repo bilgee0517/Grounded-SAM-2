@@ -60,6 +60,6 @@ python grounded_sam.py  --video_path "path/to/your/video.mp4"
 
 ## Creating Embeddings and Clustering
 
-For embedding, you can follow the process in Processing.ipynb . You can freely change the encoder model, pooling strategies, and number of frames to sample as you want for better accuracy. 
+After processing the videos for embedding, you can follow the process in Processing.ipynb . You can freely change the encoder model, pooling strategies, and number of frames to sample as you want for better accuracy. 
 
 In the current design choices, it is using Kmeans for clustering, and maxpooling. Also, there are 8 frames sampled for small and large step sizes. Large step sizes are adjusted based on the total number of frames but small step size is not adjusted. The reason is based on assumption that large steps will get the temporal features and small steps will get spatial features. 
